@@ -2,7 +2,7 @@
 
 Portfolio Digital Marketing & Marketing Automation, chạy bằng một file HTML tĩnh.
 
-**Xem online:** https://tuyetquynhb2711-maker.github.io/portfolio-tuyetquynh/
+**Xem online:** https://tuyetquynhb2711.github.io/portfolio-tuyetquynh/
 
 ## Trong repo có gì
 
