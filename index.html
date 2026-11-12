@@ -611,9 +611,11 @@ footer{
   .scroll-cue{display:none}
   .quote-band{grid-template-columns:1fr}
   .quote-band .txt{padding:32px 26px;order:2}
-  .quote-band .ph{min-height:300px;order:1}
+  /* anh doc 2:3, neu ep vao khung thap thi cat mat mat.
+     De khung cao theo ti le 3:4 va neo len dinh: nua tren la mat, nua duoi la dang nguoi */
+  .quote-band .ph{min-height:0;aspect-ratio:3/4;order:1}
   /* dien thoai: lay phan tren cua anh de khong cat mat dau */
-  .quote-band .ph img{object-position:50% 12%}
+  .quote-band .ph img{object-position:50% 0}
   .quote-band .ph::after{background:linear-gradient(0deg,var(--navy) 0%,rgba(74,58,168,.35) 55%,transparent 100%)}
   /* minmax(0,1fr) bo nguong min-content, neu khong cot se phinh ra ngoai man hinh */
   .hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
