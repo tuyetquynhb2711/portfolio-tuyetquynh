@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portfolio Tuyết Quỳnh</title>
 <meta name="description" content="Portfolio Digital Marketing và Marketing Automation của Bùi Thị Tuyết Quỳnh.">
+<link rel="preload" as="image" href="anh_port_quynh/me-cutout-v2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -316,6 +317,11 @@ ul.feat li::before{
   background:linear-gradient(90deg,var(--navy) 0%,rgba(74,58,168,.55) 38%,transparent 72%);
 }
 
+/* lien he: bam vao la goi / soan mail duoc, nhung nhin van nhu chu thuong */
+.hero-meta a,.cgrid .v a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .25s,color .25s}
+.hero-meta a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.5)}
+.cgrid .v a:hover{border-bottom-color:currentColor}
+
 /* ---------- ảnh chân dung ---------- */
 .hero-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:28px;align-items:end}
 .hero-copy{padding-bottom:150px;min-width:0}
@@ -605,7 +611,9 @@ footer{
   .scroll-cue{display:none}
   .quote-band{grid-template-columns:1fr}
   .quote-band .txt{padding:32px 26px;order:2}
-  .quote-band .ph{min-height:230px;order:1}
+  .quote-band .ph{min-height:300px;order:1}
+  /* dien thoai: lay phan tren cua anh de khong cat mat dau */
+  .quote-band .ph img{object-position:50% 12%}
   .quote-band .ph::after{background:linear-gradient(0deg,var(--navy) 0%,rgba(74,58,168,.35) 55%,transparent 100%)}
   /* minmax(0,1fr) bo nguong min-content, neu khong cot se phinh ra ngoai man hinh */
   .hero-grid{grid-template-columns:minmax(0,1fr);gap:34px}
@@ -899,8 +907,8 @@ body.editing li.ed-mov::marker{content:none}
         </p>
         <div class="hero-meta">
           <span><b>Bùi Thị Tuyết Quỳnh</b></span>
-          <span><b>0964.480.549</b></span>
-          <span>tuyetquynhb2711@gmail.com</span>
+          <span><b><a href="tel:+84964480549">0964.480.549</a></b></span>
+          <span><a href="mailto:tuyetquynhb2711@gmail.com?subject=Li%C3%AAn%20h%E1%BB%87%20c%C3%B4ng%20vi%E1%BB%87c%20-%20Portfolio%20T.Qu%E1%BB%B3nh">tuyetquynhb2711@gmail.com</a></span>
         </div>
       </div>
 
@@ -912,7 +920,7 @@ body.editing li.ed-mov::marker{content:none}
         <span class="arch" aria-hidden="true"></span>
         <span class="base" aria-hidden="true"></span>
         <span class="ground" aria-hidden="true"></span>
-        <img src="anh_port_quynh/me-cutout-v2.png" alt="Bùi Thị Tuyết Quỳnh">
+        <img src="anh_port_quynh/me-cutout-v2.png" fetchpriority="high" decoding="async" alt="Bùi Thị Tuyết Quỳnh">
       </div>
     </div>
   </div>
@@ -974,7 +982,7 @@ body.editing li.ed-mov::marker{content:none}
           </p>
         </div>
         <figure class="portrait">
-          <img src="anh_port_quynh/me-chandung.jpg" alt="Chân dung Tuyết Quỳnh" loading="lazy">
+          <img src="anh_port_quynh/me-chandung.jpg" alt="Chân dung Tuyết Quỳnh" loading="lazy" decoding="async">
         </figure>
       </div>
     </section>
@@ -1004,7 +1012,7 @@ body.editing li.ed-mov::marker{content:none}
       <h2><span class="idx">03 — Học vấn</span>Học vấn.</h2>
       <div class="split">
         <figure class="portrait cool">
-          <img src="anh_port_quynh/me-tot-nghiep.jpg" alt="Ngày tốt nghiệp" loading="lazy">
+          <img src="anh_port_quynh/me-tot-nghiep.jpg" alt="Ngày tốt nghiệp" loading="lazy" decoding="async">
           </figure><div><div class="stats wide" style="margin-top:0"><div class="stat"><div class="v">3.54</div>
               <div class="k"><b>Đại học Văn hoá Hà Nội</b><br>Quản trị dịch vụ du lịch và lữ hành<br>2021 – 07/2025 · Đã tốt nghiệp</div>
             </div>
@@ -1016,8 +1024,8 @@ body.editing li.ed-mov::marker{content:none}
       </div>
       <div class="gallery">
         <figure>
-          <img src="anh_port_quynh/me-le-tot-nghiep.jpg" alt="Lễ bế giảng và trao bằng tốt nghiệp 2025" loading="lazy">
-          </figure><figure><img src="anh_port_quynh/me-daihoc.jpg" alt="Sân trường Đại học Văn hoá Hà Nội" loading="lazy">
+          <img src="anh_port_quynh/me-le-tot-nghiep.jpg" alt="Lễ bế giảng và trao bằng tốt nghiệp 2025" loading="lazy" decoding="async">
+          </figure><figure><img src="anh_port_quynh/me-daihoc.jpg" alt="Sân trường Đại học Văn hoá Hà Nội" loading="lazy" decoding="async">
         </figure>
       </div>
     </section>
@@ -1026,10 +1034,10 @@ body.editing li.ed-mov::marker{content:none}
     <section class="blk reveal" id="qua-trinh">
       <h2><span class="idx">04 — Quá trình làm việc</span>Nơi em đã đi qua.</h2>
       <div class="photo-strip">
-        <img src="anh_port_quynh/me-team-meetup.jpg" alt="Team Meetup Travel" loading="lazy">
-        <img src="anh_port_quynh/me-van-phong.jpg" alt="Góc làm việc tại văn phòng" loading="lazy">
-        <img src="anh_port_quynh/me-team-puluong.jpg" alt="Chuyến đi Pù Luông cùng team Marketing" loading="lazy">
-        <img src="anh_port_quynh/me-doan-khach-dau-tien.jpg" alt="Đoàn khách đầu tiên em dẫn" loading="lazy">
+        <img src="anh_port_quynh/me-team-meetup.jpg" alt="Team Meetup Travel" loading="lazy" decoding="async">
+        <img src="anh_port_quynh/me-van-phong.jpg" alt="Góc làm việc tại văn phòng" loading="lazy" decoding="async">
+        <img src="anh_port_quynh/me-team-puluong.jpg" alt="Chuyến đi Pù Luông cùng team Marketing" loading="lazy" decoding="async">
+        <img src="anh_port_quynh/me-doan-khach-dau-tien.jpg" alt="Đoàn khách đầu tiên em dẫn" loading="lazy" decoding="async">
       </div>
       <p class="strip-note">
         Từ trái qua: team Meetup Travel, góc làm việc hằng ngày của em, chuyến đi Pù Luông cùng team
@@ -1103,11 +1111,11 @@ body.editing li.ed-mov::marker{content:none}
       </ul>
       <div class="gallery">
         <figure>
-          <img src="anh_port_quynh/meetup-email-bot-reply.png" alt="Bot trả lời email khách tiếng Pháp" loading="lazy">
+          <img src="anh_port_quynh/meetup-email-bot-reply.png" alt="Bot trả lời email khách tiếng Pháp" loading="lazy" decoding="async">
           <figcaption><b>Bot trả lời tiếng Pháp</b> · lúc 1h30 sáng</figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/meetup-discord-lead-alert.png" alt="Cảnh báo khách cần human rep trên Discord" loading="lazy">
+          <img src="anh_port_quynh/meetup-discord-lead-alert.png" alt="Cảnh báo khách cần human rep trên Discord" loading="lazy" decoding="async">
           <figcaption><b>Cảnh báo về Discord</b> · khách cần sale gấp</figcaption>
         </figure>
       </div>
@@ -1129,7 +1137,7 @@ body.editing li.ed-mov::marker{content:none}
       </ul>
       <div class="gallery one">
         <figure>
-          <img src="anh_port_quynh/meetup-he-thong-bot.jpg" alt="Danh sách các bot AI đang vận hành" loading="lazy">
+          <img src="anh_port_quynh/meetup-he-thong-bot.jpg" alt="Danh sách các bot AI đang vận hành" loading="lazy" decoding="async">
           <figcaption><b>Hệ thống bot</b> · các kênh social của Meetup</figcaption>
         </figure>
       </div>
@@ -1164,7 +1172,7 @@ body.editing li.ed-mov::marker{content:none}
         </ul>
       <div class="gallery one">
         <figure>
-          <img src="anh_port_quynh/meetup-dashboard-sale-bao-mat.png" alt="Dashboard phân tích sale — bảo mật" loading="lazy">
+          <img src="anh_port_quynh/meetup-dashboard-sale-bao-mat.png" alt="Dashboard phân tích sale — bảo mật" loading="lazy" decoding="async">
           <figcaption><b>Dashboard sale</b> · tự cập nhật mỗi sáng, đã làm mờ dữ liệu</figcaption>
         </figure>
       </div>
@@ -1243,7 +1251,7 @@ body.editing li.ed-mov::marker{content:none}
       </p>
       <figure class="shot-sm">
         <a href="anh_port_quynh/brevo-statistics.jpg" target="_blank" rel="noopener">
-          <img src="anh_port_quynh/brevo-statistics.jpg" alt="Thống kê email" loading="lazy" style="cursor: pointer;"></a>
+          <img src="anh_port_quynh/brevo-statistics.jpg" alt="Thống kê email" loading="lazy" decoding="async" style="cursor: pointer;"></a>
         <figcaption><b>Thống kê gửi mail</b> · 05/05 – 09/11/2026</figcaption>
       </figure>
 
@@ -1256,7 +1264,7 @@ body.editing li.ed-mov::marker{content:none}
       </p>
       <div class="gallery one sm">
         <figure>
-          <img src="anh_port_quynh/gmail-bot-labels.jpg" alt="Hệ thống nhãn tự động của bot" loading="lazy">
+          <img src="anh_port_quynh/gmail-bot-labels.jpg" alt="Hệ thống nhãn tự động của bot" loading="lazy" decoding="async">
           <figcaption><b>Nhãn bot tự gắn</b> · kiểm soát từng tình huống trả lời</figcaption>
         </figure>
       </div>
@@ -1294,19 +1302,19 @@ body.editing li.ed-mov::marker{content:none}
       <div class="gallery">
         <figure>
           <a href="https://tuyendung.meetup.travel/" target="_blank" rel="noopener">
-            <img src="anh_port_quynh/hr-trangchu.jpg" alt="Trang chủ website tuyển dụng" loading="lazy" style="cursor: pointer;"></a>
+            <img src="anh_port_quynh/hr-trangchu.jpg" alt="Trang chủ website tuyển dụng" loading="lazy" decoding="async" style="cursor: pointer;"></a>
           <figcaption><b>Trang chủ</b> · <a class="link" href="https://tuyendung.meetup.travel/" target="_blank" rel="noopener">Mở website →</a></figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/hr-vitri.jpg" alt="Trang danh sách vị trí đang tuyển" loading="lazy">
+          <img src="anh_port_quynh/hr-vitri.jpg" alt="Trang danh sách vị trí đang tuyển" loading="lazy" decoding="async">
           <figcaption><b>Trang vị trí đang tuyển</b> · 13 vị trí, đánh giá 4,9 sao</figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/hr-slt.jpg" alt="Trang Sales Leader Trainee" loading="lazy">
+          <img src="anh_port_quynh/hr-slt.jpg" alt="Trang Sales Leader Trainee" loading="lazy" decoding="async">
           <figcaption style="text-align: center; margin-left: auto; margin-right: auto;"><b>Sales Leader Trainee · Cá chép hoá rồng</b></figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/hr-phap.jpg" alt="Trang Tour Consultant tiếng Pháp" loading="lazy">
+          <img src="anh_port_quynh/hr-phap.jpg" alt="Trang Tour Consultant tiếng Pháp" loading="lazy" decoding="async">
           <figcaption style="text-align: center; margin-left: auto; margin-right: auto;"><b>Tour Consultant tiếng Pháp · Con đường thứ năm</b></figcaption>
         </figure>
       </div>
@@ -1319,11 +1327,11 @@ body.editing li.ed-mov::marker{content:none}
       </p>
       <div class="gallery">
         <figure>
-          <img src="anh_port_quynh/hr-emagazine.jpg" alt="Bài Emagazine số 1" loading="lazy">
+          <img src="anh_port_quynh/hr-emagazine.jpg" alt="Bài Emagazine số 1" loading="lazy" decoding="async">
           <figcaption><b>Meetup Magazine #01</b></figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/hr-phucloi.jpg" alt="Trang phúc lợi" loading="lazy">
+          <img src="anh_port_quynh/hr-phucloi.jpg" alt="Trang phúc lợi" loading="lazy" decoding="async">
           <figcaption><b>Trang phúc lợi</b> · viết lại theo quy chuẩn nội dung</figcaption>
         </figure>
       </div>
@@ -1358,8 +1366,8 @@ body.editing li.ed-mov::marker{content:none}
       <h3>Nội dung social cho Meetup · 2025</h3>
       <p>
         Giai đoạn đầu ở Meetup em còn trực tiếp làm nội dung cho kênh Instagram, trước khi chuyển hẳn
-        sang mảng hệ thống.&nbsp;</p><div class="gallery"><figure><a href="https://www.instagram.com/meetuptravel_premium/reels/" target="_blank" rel="noopener"><img src="anh_port_quynh/old-09-ig-video-48k.jpg" alt="Video Instagram đạt 48.100 lượt xem" loading="lazy" style="cursor: pointer;"></a>
-          <figcaption><b>Video Instagram</b> · 48.100 lượt xem</figcaption></figure><figure><a href="https://www.instagram.com/meetuptravel_premium/reels/" target="_blank" rel="noopener"><img src="anh_port_quynh/old-10-ig-followers-2k.jpg" alt="Kênh tăng hơn 2.000 người theo dõi" loading="lazy" style="cursor: pointer;"></a>
+        sang mảng hệ thống.&nbsp;</p><div class="gallery"><figure><a href="https://www.instagram.com/meetuptravel_premium/reels/" target="_blank" rel="noopener"><img src="anh_port_quynh/old-09-ig-video-48k.jpg" alt="Video Instagram đạt 48.100 lượt xem" loading="lazy" decoding="async" style="cursor: pointer;"></a>
+          <figcaption><b>Video Instagram</b> · 48.100 lượt xem</figcaption></figure><figure><a href="https://www.instagram.com/meetuptravel_premium/reels/" target="_blank" rel="noopener"><img src="anh_port_quynh/old-10-ig-followers-2k.jpg" alt="Kênh tăng hơn 2.000 người theo dõi" loading="lazy" decoding="async" style="cursor: pointer;"></a>
           <figcaption><b>Tăng hơn 2.000 người theo dõi</b> · giai đoạn phụ trách kênh</figcaption>
         </figure>
       </div>
@@ -1386,20 +1394,20 @@ body.editing li.ed-mov::marker{content:none}
       <div class="gallery">
         <figure>
           <a href="https://docs.google.com/document/d/1jUcopf8mr7IXAWUOLf2qdvmvrFv4OGI_gCLrqex-IEo/edit" target="_blank" rel="noopener">
-            <img src="anh_port_quynh/old-08-social-fanpage.jpg" alt="Nội dung fanpage và group" loading="lazy" style="cursor: pointer;"></a>
+            <img src="anh_port_quynh/old-08-social-fanpage.jpg" alt="Nội dung fanpage và group" loading="lazy" decoding="async" style="cursor: pointer;"></a>
           <figcaption><b>Nội dung fanpage &amp; group</b> · <a class="link" href="https://docs.google.com/document/d/1jUcopf8mr7IXAWUOLf2qdvmvrFv4OGI_gCLrqex-IEo/edit" target="_blank" rel="noopener">Xem danh sách →</a></figcaption>
         </figure>
         <figure>
           <a href="https://docs.google.com/document/d/1J8pwmCVj0lHLJErxXc8aX_4I9vmygFPI7MtyvfqluuQ/edit" target="_blank" rel="noopener">
-            <img src="anh_port_quynh/old-11-seo-pr-article.jpg" alt="Bài SEO website và bài PR sự kiện" loading="lazy" style="cursor: pointer;"></a>
+            <img src="anh_port_quynh/old-11-seo-pr-article.jpg" alt="Bài SEO website và bài PR sự kiện" loading="lazy" decoding="async" style="cursor: pointer;"></a>
           <figcaption><b>Bài SEO &amp; bài PR sự kiện</b> · <a class="link" href="https://docs.google.com/document/d/1J8pwmCVj0lHLJErxXc8aX_4I9vmygFPI7MtyvfqluuQ/edit" target="_blank" rel="noopener">Xem danh sách →</a></figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/old-12-seo-serp-ranking.jpg" alt="Thứ hạng từ khoá trên Google" loading="lazy">
+          <img src="anh_port_quynh/old-12-seo-serp-ranking.jpg" alt="Thứ hạng từ khoá trên Google" loading="lazy" decoding="async">
           <figcaption><b>Thứ hạng trên Google</b> · chụp từ kết quả tìm kiếm</figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/old-13-design.jpg" alt="Thiết kế ảnh" loading="lazy">
+          <img src="anh_port_quynh/old-13-design.jpg" alt="Thiết kế ảnh" loading="lazy" decoding="async">
           <figcaption><b>Thiết kế ảnh</b> · bài đăng và ấn phẩm truyền thông</figcaption>
         </figure>
       </div>
@@ -1413,16 +1421,16 @@ body.editing li.ed-mov::marker{content:none}
       </p>
       <div class="gallery three">
         <figure>
-          <img src="anh_port_quynh/old-18-video-process.jpg" alt="Quy trình làm video" loading="lazy">
+          <img src="anh_port_quynh/old-18-video-process.jpg" alt="Quy trình làm video" loading="lazy" decoding="async">
           <figcaption><b>Quy trình làm video</b> · nghiên cứu, kịch bản, dựng, lồng tiếng</figcaption>
         </figure>
         <figure>
           <a href="https://www.facebook.com/tamopcasary/reels/" target="_blank" rel="noopener">
-            <img src="anh_port_quynh/old-19-video-casary-1.jpg" alt="Video thương hiệu Casary" loading="lazy" style="cursor: pointer;"></a>
+            <img src="anh_port_quynh/old-19-video-casary-1.jpg" alt="Video thương hiệu Casary" loading="lazy" decoding="async" style="cursor: pointer;"></a>
           <figcaption><b>Chiến dịch thương hiệu Casary</b> · <a class="link" href="https://www.facebook.com/tamopcasary/reels/" target="_blank" rel="noopener">Xem thêm →</a></figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/old-21-video-300-scripts.jpg" alt="Tuyển tập video" loading="lazy">
+          <img src="anh_port_quynh/old-21-video-300-scripts.jpg" alt="Tuyển tập video" loading="lazy" decoding="async">
           <figcaption><b>Tuyển tập chọn lọc</b> · hơn 300 kịch bản</figcaption>
         </figure>
       </div>
@@ -1435,15 +1443,15 @@ body.editing li.ed-mov::marker{content:none}
       </p>
       <div class="gallery three video-grid">
         <figure>
-          <a href="https://www.tiktok.com/@findhomestay_/video/7513824158308994309" target="_blank" rel="noopener"><img src="anh_port_quynh/kenh-rieng-video-1.jpg" alt="Video review homestay Đà Nẵng" loading="lazy" style="cursor:pointer"></a>
+          <a href="https://www.tiktok.com/@findhomestay_/video/7513824158308994309" target="_blank" rel="noopener"><img src="anh_port_quynh/kenh-rieng-video-1.jpg" alt="Video review homestay Đà Nẵng" loading="lazy" decoding="async" style="cursor:pointer"></a>
           <figcaption><b>Review homestay Đà Nẵng</b> · 5,7k lượt xem</figcaption>
         </figure>
         <figure>
-          <a href="https://www.tiktok.com/@findhomestay_/video/7514342816772885767" target="_blank" rel="noopener"><img src="anh_port_quynh/kenh-rieng-video-2.jpg" alt="Video gợi ý điểm đến Đà Nẵng" loading="lazy" style="cursor:pointer"></a>
+          <a href="https://www.tiktok.com/@findhomestay_/video/7514342816772885767" target="_blank" rel="noopener"><img src="anh_port_quynh/kenh-rieng-video-2.jpg" alt="Video gợi ý điểm đến Đà Nẵng" loading="lazy" decoding="async" style="cursor:pointer"></a>
           <figcaption><b>Gợi ý điểm đến Đà Nẵng</b> · 2,8k lượt xem</figcaption>
         </figure>
         <figure>
-          <a href="https://www.tiktok.com/@findhomestay_/video/7512508687286586642" target="_blank" rel="noopener"><img src="anh_port_quynh/kenh-rieng-video-3.jpg" alt="Video POV di tích nghìn năm tuổi" loading="lazy" style="cursor:pointer"></a>
+          <a href="https://www.tiktok.com/@findhomestay_/video/7512508687286586642" target="_blank" rel="noopener"><img src="anh_port_quynh/kenh-rieng-video-3.jpg" alt="Video POV di tích nghìn năm tuổi" loading="lazy" decoding="async" style="cursor:pointer"></a>
           <figcaption><b>POV di tích nghìn năm</b> · 2,6k lượt xem</figcaption>
         </figure>
       </div>
@@ -1454,8 +1462,8 @@ body.editing li.ed-mov::marker{content:none}
         kiện. Giúp em có thêm trải nghiệm &amp; bối cảnh để hiểu thêm về ngành du lịch.</p>
       <div class="gallery three">
         <figure>
-          <img src="anh_port_quynh/me-lam-guide.jpg" alt="Dẫn khách quốc tế" loading="lazy">
-          <figcaption><b>Dẫn khách quốc tế</b> · Hanoi walking &amp; food tour phố cổ</figcaption></figure><figure><img src="anh_port_quynh/me-chay-su-kien.jpg" alt="Chạy sự kiện" loading="lazy">
+          <img src="anh_port_quynh/me-lam-guide.jpg" alt="Dẫn khách quốc tế" loading="lazy" decoding="async">
+          <figcaption><b>Dẫn khách quốc tế</b> · Hanoi walking &amp; food tour phố cổ</figcaption></figure><figure><img src="anh_port_quynh/me-chay-su-kien.jpg" alt="Chạy sự kiện" loading="lazy" decoding="async">
           <figcaption><b>Chạy sự kiện</b> · checklist và vận hành tại chỗ</figcaption>
         </figure>
       </div>
@@ -1473,15 +1481,15 @@ body.editing li.ed-mov::marker{content:none}
       </div>
       <div class="gallery three">
         <figure>
-          <img src="anh_port_quynh/kynang-thuyettrinh-daiviet.jpg" alt="Thuyết trình sản phẩm cho đối tác" loading="lazy">
+          <img src="anh_port_quynh/kynang-thuyettrinh-daiviet.jpg" alt="Thuyết trình sản phẩm cho đối tác" loading="lazy" decoding="async">
           <figcaption><b>Thuyết trình sản phẩm</b> · Nhựa Đại Việt</figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/kynang-tuvan-sukien.jpg" alt="Hỗ trợ tư vấn khách hàng tại sự kiện" loading="lazy">
+          <img src="anh_port_quynh/kynang-tuvan-sukien.jpg" alt="Hỗ trợ tư vấn khách hàng tại sự kiện" loading="lazy" decoding="async">
           <figcaption><b>Tư vấn khách tại sự kiện</b></figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/kynang-phiendich-doitac.jpg" alt="Thuyết trình và hỗ trợ phiên dịch cho đối tác quốc tế" loading="lazy">
+          <img src="anh_port_quynh/kynang-phiendich-doitac.jpg" alt="Thuyết trình và hỗ trợ phiên dịch cho đối tác quốc tế" loading="lazy" decoding="async">
           <figcaption><b>Hỗ trợ phiên dịch</b> · tiếp đối tác quốc tế</figcaption>
         </figure>
       </div>
@@ -1500,20 +1508,20 @@ body.editing li.ed-mov::marker{content:none}
       <h2><span class="idx">08 — Chứng chỉ &amp; đánh giá</span>Chứng chỉ và nhận xét.</h2>
       <div class="gallery three">
         <figure>
-          <img src="anh_port_quynh/old-29-certificates.jpg" alt="Chứng chỉ Content Marketing và tiếng Anh" loading="lazy">
+          <img src="anh_port_quynh/old-29-certificates.jpg" alt="Chứng chỉ Content Marketing và tiếng Anh" loading="lazy" decoding="async">
           <figcaption><b>Chứng chỉ Content Marketing</b> · và giao tiếp tiếng Anh</figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/old-30-manager-feedback.jpg" alt="Đánh giá từ quản lý" loading="lazy">
+          <img src="anh_port_quynh/old-30-manager-feedback.jpg" alt="Đánh giá từ quản lý" loading="lazy" decoding="async">
           <figcaption><b>Đánh giá nhân sự 91/100</b> · xếp loại Xuất sắc, công ty Welkin</figcaption>
         </figure>
         <figure>
-          <img src="anh_port_quynh/khoa-hoc-seo-blueprint.jpg" alt="Nội dung khoá học SEO Blueprint 10 buổi" loading="lazy">
+          <img src="anh_port_quynh/khoa-hoc-seo-blueprint.jpg" alt="Nội dung khoá học SEO Blueprint 10 buổi" loading="lazy" decoding="async">
           <figcaption><b>Khoá SEO Blueprint</b> · 10 buổi, từ research keyword tới entity</figcaption>
         </figure>
       </div>
       <figure class="wide-shot">
-        <img src="anh_port_quynh/meetup-leader-nhanxet.png" alt="Nhận xét của leader trong email đề xuất thăng chức" loading="lazy">
+        <img src="anh_port_quynh/meetup-leader-nhanxet.png" alt="Nhận xét của leader trong email đề xuất thăng chức" loading="lazy" decoding="async">
         <figcaption><b>Nhận xét của leader</b> · trích email đề xuất thăng chức Mid-level, 05/2026</figcaption>
       </figure>
     </section>
@@ -1528,7 +1536,7 @@ body.editing li.ed-mov::marker{content:none}
             cũng đều bắt đầu từ việc không biết, rồi ngồi mò cho tới khi nó chạy.
           </p>
         </div>
-        <div class="ph"><img src="anh_port_quynh/me-sukien-2.jpg" alt="Tuyết Quỳnh tại sự kiện khách hàng" loading="lazy"></div>
+        <div class="ph"><img src="anh_port_quynh/me-sukien-2.jpg" alt="Tuyết Quỳnh tại sự kiện khách hàng" loading="lazy" decoding="async"></div>
       </div>
     </section>
 
@@ -1539,8 +1547,8 @@ body.editing li.ed-mov::marker{content:none}
         <p>Nếu công ty mình đang cần một bạn làm marketing hiểu cả nội dung lẫn hệ thống đứng sau nó,
         em rất mong được trao đổi thêm.</p>
         <div class="cgrid">
-          <div><div class="k">Điện thoại</div><div class="v">0964.480.549</div></div>
-          <div><div class="k">Email</div><div class="v">tuyetquynhb2711@gmail.com</div></div>
+          <div><div class="k">Điện thoại</div><div class="v"><a href="tel:+84964480549">0964.480.549</a></div></div>
+          <div><div class="k">Email</div><div class="v"><a href="mailto:tuyetquynhb2711@gmail.com?subject=Li%C3%AAn%20h%E1%BB%87%20c%C3%B4ng%20vi%E1%BB%87c%20-%20Portfolio%20T.Qu%E1%BB%B3nh">tuyetquynhb2711@gmail.com</a></div></div>
           <div><div class="k">Địa chỉ</div><div class="v">Đống Đa, Hà Nội</div></div>
         </div>
         <div class="sign">
@@ -1643,7 +1651,7 @@ body.editing li.ed-mov::marker{content:none}
       html += '<div class="gallery ' + (anh.length === 1 ? 'one sm' : anh.length === 2 ? '' : 'three') + '">';
       anh.forEach(function(a){
         var src = THUMUC + a.file;
-        var img = '<img src="' + src + '" alt="' + esc(a.alt || d.ten) + '" loading="lazy">';
+        var img = '<img src="' + src + '" alt="' + esc(a.alt || d.ten) + '" loading="lazy" decoding="async">';
         html += '<figure>'
              + (a.link ? '<a href="' + esc(a.link) + '" target="_blank" rel="noopener">' + img + '</a>' : img)
              + (a.chuThich ? '<figcaption>' + esc(a.chuThich) + '</figcaption>' : '')
