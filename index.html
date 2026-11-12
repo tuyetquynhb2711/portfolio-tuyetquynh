@@ -871,6 +871,7 @@ body.editing li.ed-mov::marker{content:none}
 </head>
 <body class="">
 
+<script src="du-an-ca-nhan.js"></script>
 <div id="progress"></div>
 <button id="to-top" aria-label="Lên đầu trang" title="Lên đầu trang" class="show">↑</button>
 
@@ -1489,38 +1490,9 @@ body.editing li.ed-mov::marker{content:none}
     <!-- ===== DỰ ÁN CÁ NHÂN ===== -->
     <section class="blk reveal" id="ca-nhan">
       <h2><span class="idx">07 — Dự án cá nhân</span>Những thứ em làm ngoài giờ<br>để tự học.</h2>
-      <p class="lead">
-        Ngoài công việc ở công ty, em giữ thói quen tự dựng vài hệ thống nhỏ cho riêng mình. Đây là chỗ
-        em thử những thứ mới sao cho vẫn tối ưu được thời gian và học những cái khác.</p>
-
-      <h3>Dự án 01 · Kênh chia sẻ tips học tiếng Trung</h3>
-      <div class="ctx">Tự chạy một kênh nội dung ngách từ đầu: làm nội dung chia sẻ cách học tiếng Trung, rồi bán tài liệu học tập và gắn affiliate trên chính tệp người theo dõi đó.</div>
-      <ul class="feat">
-        <li>Làm nội dung theo tuyến: lộ trình học, bộ thủ, giáo trình HSK, mẹo nhớ mặt chữ. Mỗi bài là một bước trong lộ trình nên người theo dõi có lý do quay lại</li>
-        <li>Agent chạy trên máy cá nhân lo phần nặng: nghiên cứu từ khoá, soạn nháp theo nhóm chủ đề và xếp lịch đăng, em duyệt lại trước khi đăng</li>
-        <li>Kiếm tiền bằng <span class="hl">bán file học tập và affiliate</span>, bài hướng dẫn tốt nhất đạt <b class="num">1.900 lượt thích</b></li>
-      </ul>
-      <div class="gallery one sm">
-        <figure>
-          <img src="anh_port_quynh/ca-nhan-tiengtrung.jpg" alt="Bài chia sẻ lộ trình học tiếng Trung trên kênh cá nhân" loading="lazy">
-          <figcaption><b>Bài lộ trình học tiếng Trung</b> · 1.9K lượt thích, đã che tên tài khoản</figcaption>
-        </figure>
-      </div>
-
-      <h3>Dự án 02 · Fact tâm lý học có nguồn kiểm chứng</h3>
-      <div class="ctx">Mỗi ngày một fact tâm lý, nhưng phải dẫn được nghiên cứu gốc. Làm tay thì không thể đều, nên em để agent lo phần tìm và dựng bài.</div>
-      <ul class="feat">
-        <li>Agent tự tìm nghiên cứu, rút fact và <span class="hl">dựng sẵn bài kèm nguồn kiểm chứng</span> (tên tác giả, năm, tạp chí), em kiểm lại nguồn trước khi đăng</li>
-        <li>Chạy đều mỗi ngày theo dạng chuỗi đánh số, nên kênh có nhịp và người đọc theo dõi được tới ngày thứ bao nhiêu -&gt; gắn affiliate.</li>
-        </ul><div class="gallery one sm"><figure><img src="anh_port_quynh/ca-nhan-fact-tamly.jpg" alt="Bài fact tâm lý kèm nguồn nghiên cứu và bài affiliate" loading="lazy">
-          <figcaption><b>Fact tâm lý kèm nguồn</b> · và bài affiliate đi kèm, đã che tên tài khoản</figcaption>
-        </figure>
-      </div>
-
-      <p class="muted">
-        Hai kênh này em làm mày mò tự tạo case study để tăng trải nghiệm cho những kiến thức mình được học. Chúng là chỗ em thử trọn một vòng
-        marketing nhỏ của riêng mình: chọn ngách, dựng nội dung bằng agent, rồi tìm cách kiếm tiền từ nó.
-      </p>
+      <!-- Noi dung muc nay duoc dung tu file du-an-ca-nhan.js.
+           Sua du an o file do, khong sua truc tiep o day. -->
+      <div id="ca-nhan-list" data-auto-render="du-an-ca-nhan"></div>
     </section>
 
     <section class="blk reveal" id="chung-chi">
@@ -1633,6 +1605,58 @@ body.editing li.ed-mov::marker{content:none}
     stray.forEach(function(sec){ main.appendChild(sec); });
     if (stray.length) console.warn('[portfolio] da gom lai ' + stray.length + ' muc bi vang ra ngoai cot noi dung');
   } catch(e){}
+})();
+
+/* ===== Dung muc "Du an ca nhan" tu file du-an-ca-nhan.js =====
+   Container #ca-nhan-list luon bi ve lai moi lan mo trang, nen dung sua
+   truc tiep trong trang: sua o file du lieu. ===== */
+(function(){
+  var box = document.getElementById('ca-nhan-list');
+  var data = window.DU_AN_CA_NHAN;
+  if (!box) return;
+  if (!data || !data.duAn) {
+    box.innerHTML = '<div class="ctx">Khong doc duoc file <b>du-an-ca-nhan.js</b>. '
+      + 'Kiem tra xem file co nam cung thu muc voi trang nay khong.</div>';
+    return;
+  }
+  var THUMUC = 'anh_port_quynh/du-an-ca-nhan/';
+  function esc(t){ return String(t == null ? '' : t); }
+
+  var html = '';
+  if (data.moDau) html += '<p class="lead">' + esc(data.moDau) + '</p>';
+
+  var stt = 0;
+  data.duAn.forEach(function(d){
+    if (!d || d.an) return;
+    stt++;
+    var so = (stt < 10 ? '0' : '') + stt;
+    html += '<h3>Dự án ' + so + ' · ' + esc(d.ten) + '</h3>';
+    if (d.boiCanh) html += '<div class="ctx">' + esc(d.boiCanh) + '</div>';
+    if (d.y && d.y.length) {
+      html += '<ul class="feat">';
+      d.y.forEach(function(i){ html += '<li>' + esc(i) + '</li>'; });
+      html += '</ul>';
+    }
+    var anh = (d.anh || []).filter(function(a){ return a && a.file; });
+    if (anh.length) {
+      html += '<div class="gallery ' + (anh.length === 1 ? 'one sm' : anh.length === 2 ? '' : 'three') + '">';
+      anh.forEach(function(a){
+        var src = THUMUC + a.file;
+        var img = '<img src="' + src + '" alt="' + esc(a.alt || d.ten) + '" loading="lazy">';
+        html += '<figure>'
+             + (a.link ? '<a href="' + esc(a.link) + '" target="_blank" rel="noopener">' + img + '</a>' : img)
+             + (a.chuThich ? '<figcaption>' + esc(a.chuThich) + '</figcaption>' : '')
+             + '</figure>';
+      });
+      html += '</div>';
+    }
+    if (d.ketQua) {
+      html += '<div class="res"><span class="tag">Kết quả</span><p>' + esc(d.ketQua) + '</p></div>';
+    }
+  });
+
+  if (data.ketLuan) html += '<p class="muted">' + esc(data.ketLuan) + '</p>';
+  box.innerHTML = html;
 })();
 
 /* nut len dau trang tren dien thoai */
@@ -1873,6 +1897,9 @@ body.editing li.ed-mov::marker{content:none}
     var rb = doc.querySelector('#restore-bar'); if (rb) rb.remove();
     /* #pp-list do script tu dung; neu de lai trong file thi lan sau mo se bi nhan doi */
     var pl = doc.querySelector('#pp-list'); if (pl) pl.innerHTML = '';
+    /* cac khoi dung tu file du lieu ngoai (vd du-an-ca-nhan.js): tra ve rong,
+       de file du lieu van la nguon duy nhat */
+    doc.querySelectorAll('[data-auto-render]').forEach(function(el){ el.innerHTML = ''; });
     doc.querySelectorAll('#ed-tools,#ed-handle,#ed-frame').forEach(function(x){ x.remove(); });
     doc.querySelectorAll('.ed-hot,.ed-pin').forEach(function(el){ el.classList.remove('ed-hot','ed-pin'); });
     doc.querySelectorAll('.cb-btn.on,.cb-al.on').forEach(function(el){ el.classList.remove('on'); });
