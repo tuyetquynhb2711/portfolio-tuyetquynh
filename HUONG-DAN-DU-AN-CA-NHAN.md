@@ -44,6 +44,26 @@ Khung một dự án:
 }
 ```
 
+## Bản tiếng Anh của một dự án
+
+Trang có nút **VI / EN** ở góc trên phải, nên mỗi trường chữ đều có một trường tiếng Anh đi kèm.
+Tên trường giống bản tiếng Việt, thêm đuôi `En`:
+
+| Tiếng Việt | Tiếng Anh |
+|---|---|
+| `ten` | `tenEn` |
+| `boiCanh` | `boiCanhEn` |
+| `y: [...]` | `yEn: [...]` — cùng số dòng, cùng thứ tự |
+| `ketQua` | `ketQuaEn` |
+| `chuThich` (trong `anh`) | `chuThichEn` |
+| `moDau`, `ketLuan` (đầu/cuối cả mục) | `moDauEn`, `ketLuanEn` |
+
+Bỏ trống hoặc xoá trường `En` thì chỗ đó hiện lại bản tiếng Việt, không bị trống trang.
+Chữ "Dự án 01" và nhãn "Kết quả" tự đổi thành "Project 01" và "Result", không phải khai.
+
+Số liệu trong câu nên viết theo đúng cách đọc của từng thứ tiếng: tiếng Việt `1.900 lượt thích`,
+tiếng Anh `1,900 likes`.
+
 ## Xoá hoặc tạm ẩn
 
 - **Tạm ẩn**, giữ lại nội dung để sau dùng: thêm dòng `an: true,` vào đầu khối đó.
